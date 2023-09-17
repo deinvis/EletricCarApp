@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/adapter/CarAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/carro_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Imprementação de RecyclerView para listar os carros">
       <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
@@ -212,6 +208,29 @@
       <option name="presentableId" value="Default" />
       <updated>1694476511520</updated>
     </task>
+    <task id="LOCAL-00001" summary="Imprementação de RecyclerView para listar os carros">
+      <created>1694929469465</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694929469466</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Imprementação de RecyclerView para listar os carros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Imprementação de RecyclerView para listar os carros" />
   </component>
 </project>

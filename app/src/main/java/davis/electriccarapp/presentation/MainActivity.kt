@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
             "Ice Cream Sandwich", "Jelly Bean"
         )
         val adapter = CarAdapter(dados)
-        listaCarros.layoutManager = LinearLayoutManager(this)
         listaCarros.adapter = adapter
     }
 

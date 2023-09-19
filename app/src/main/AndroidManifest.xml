@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ElectricCarApp"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -22,12 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.AutonomiaActivity"
-            android:parentActivityName=".presentation.MainActivity"
+            android:name=".ui.AutonomiaActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".presentation.MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
     </application>
 

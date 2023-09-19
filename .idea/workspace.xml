@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Imprementação de RecyclerView para listar os carros">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Alteração no lugar da definicao do layoutManager da RecyclerView">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/data/CarFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/domain/Carro.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/AutonomiaActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/AutonomiaActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/presentation/adapter/CarAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/adapter/CarAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/carro_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/carro_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694929469466</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Alteração no lugar da definicao do layoutManager da RecyclerView">
+      <created>1694929840185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694929840185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +244,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Imprementação de RecyclerView para listar os carros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Imprementação de RecyclerView para listar os carros" />
+    <MESSAGE value="Alteração no lugar da definicao do layoutManager da RecyclerView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração no lugar da definicao do layoutManager da RecyclerView" />
   </component>
 </project>

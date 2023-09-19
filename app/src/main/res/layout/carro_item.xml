@@ -25,7 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iv_sb"
+                android:id="@+id/iv_carro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sporting_black"
@@ -41,7 +41,7 @@
                 android:text="Preço"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_sb" />
+                app:layout_constraintTop_toBottomOf="@id/iv_carro" />
 
             <TextView
                 android:id="@+id/tv_preco_value"
@@ -50,7 +50,7 @@
                 android:layout_marginStart="16dp"
                 android:text="R$100.000.000"
                 app:layout_constraintStart_toEndOf="@id/tv_preco"
-                app:layout_constraintTop_toBottomOf="@id/iv_sb" />
+                app:layout_constraintTop_toBottomOf="@id/iv_carro" />
 
             <TextView
                 android:id="@+id/tv_bateria"

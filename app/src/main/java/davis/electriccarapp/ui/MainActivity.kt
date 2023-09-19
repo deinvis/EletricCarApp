@@ -1,15 +1,13 @@
-package davis.electriccarapp.presentation
+package davis.electriccarapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.LinearLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import davis.electriccarapp.R
-import davis.electriccarapp.presentation.adapter.CarAdapter
+import davis.electriccarapp.data.CarFactory
+import davis.electriccarapp.ui.adapter.CarAdapter
 
 class MainActivity : AppCompatActivity() {
     lateinit var button: Button
@@ -29,10 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupLista() {
-        val dados = arrayOf(
-            "Cupcake", "Donut", "Froyo", "Gingerbread", "Honeycomb",
-            "Ice Cream Sandwich", "Jelly Bean"
-        )
+        val dados = CarFactory.list
         val adapter = CarAdapter(dados)
         listaCarros.adapter = adapter
     }

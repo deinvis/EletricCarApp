@@ -1,4 +1,4 @@
-package davis.electriccarapp.presentation
+package davis.electriccarapp.ui
 
 import android.os.Bundle
 import android.view.View

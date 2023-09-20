@@ -1,10 +1,12 @@
 package davis.electriccarapp.ui.adapter
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import davis.electriccarapp.R
@@ -26,7 +28,7 @@ class CarAdapter(private val carros  : List<Carro>) : RecyclerView.Adapter<CarAd
         holder.bateria.text = carros[position].bateria
         holder.potencia.text = carros[position].potencia
         holder.recarga.text = carros[position].recarga
-        holder.recarga.text = carros[position].urlPhoto.toString()
+        holder.img.setImageDrawable(carros[position].urlPhoto.toDrawable())
 
     }
 

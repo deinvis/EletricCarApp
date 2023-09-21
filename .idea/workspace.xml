@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="- Realocação de alguns pacotes&#10;- Melhoramento do adapter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/adapter/CarAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/adapter/CarAdapter.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "android.gradle.sync.needed": "true",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "/home/davis/AndroidStudioProjects/EletricCarApp"
   }
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695167749779</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Realocação de alguns pacotes&#10;- Melhoramento do adapter">
+      <created>1695243295597</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695243295597</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

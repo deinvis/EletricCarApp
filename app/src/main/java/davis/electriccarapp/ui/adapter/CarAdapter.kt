@@ -28,7 +28,7 @@ class CarAdapter(private val carros  : List<Carro>) : RecyclerView.Adapter<CarAd
         holder.bateria.text = carros[position].bateria
         holder.potencia.text = carros[position].potencia
         holder.recarga.text = carros[position].recarga
-        holder.img.setImageDrawable(carros[position].urlPhoto.toDrawable())
+        //holder.img.setImageDrawable(carros[position].urlPhoto.toDrawable())
 
     }
 

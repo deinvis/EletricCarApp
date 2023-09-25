@@ -1,6 +1,8 @@
 package davis.electriccarapp.ui
 
+import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -8,6 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import davis.electriccarapp.R
+import java.lang.Exception
+import java.net.HttpURLConnection
+import java.net.URL
 
 class AutonomiaActivity : AppCompatActivity(){
     lateinit var bt_calcular: Button

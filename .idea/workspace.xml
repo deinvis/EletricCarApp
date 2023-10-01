@@ -10,15 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Implementação de TabLayout com ViewPager para as abas, criação de fragments para as abas, mudança do botão de calcular para FAB.">
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.unitTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/data/CarFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/data/CarFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/domain/Carro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/domain/Carro.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/AutonomiaActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/AutonomiaActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/CarFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/CarFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/adapter/CarAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/adapter/CarAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/car_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/car_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +63,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
-    "last_opened_file_path": "/home/davis/AndroidStudioProjects/EletricCarApp"
+    "last_opened_file_path": "/home/davis/AndroidStudioProjects/EletricCarApp",
+    "memory.settings.postsync.last.time.stamp": "1696134725086",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
   <component name="RecentsManager">

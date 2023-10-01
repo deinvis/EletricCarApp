@@ -95,9 +95,7 @@ class CarFragment : Fragment() {
         override fun onProgressUpdate(vararg values: String?) {
             Log.d("PASSOU AQUI", "0")
             try {
-                Log.d("PASSOU AQUI", "1")
                 val jsonArray = JSONTokener(values[0]).nextValue() as JSONArray
-                Log.d("PASSOU AQUI", "2")
                 for (i in 0 until jsonArray.length()) {
                     val id = jsonArray.getJSONObject(i).getString("id")
                     Log.d("ID ->", id)
@@ -124,7 +122,7 @@ class CarFragment : Fragment() {
                 }
                 setupList()
             } catch (ex: java.lang.Exception) {
-                Log.e("Erro agui ->", ex.message.toString())
+                Log.e("Erro aqui ->", ex.message.toString())
             }
         }
     }

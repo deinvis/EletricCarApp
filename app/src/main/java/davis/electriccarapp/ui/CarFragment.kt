@@ -11,17 +11,27 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextClock
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import davis.electriccarapp.R
 import davis.electriccarapp.data.CarFactory
+import davis.electriccarapp.data.CarsApi
 import davis.electriccarapp.domain.Carro
 import davis.electriccarapp.ui.adapter.CarAdapter
 import org.json.JSONArray
 import org.json.JSONObject
 import org.json.JSONTokener
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -29,6 +39,9 @@ class CarFragment : Fragment() {
     lateinit var listaCarros: RecyclerView
     lateinit var fabCalcular: FloatingActionButton
     lateinit var progress: ProgressBar
+    lateinit var noConnectionImage: ImageView
+    lateinit var noConnectionText: TextView
+    lateinit var carsApi: CarsApi
     var carrosArray: ArrayList<Carro> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,17 +53,65 @@ class CarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupRetrofit()
         setupViews(view)
         setupListeners()
-        val checkInternet = checkForInternet(context)
-        Log.d("Internet Connection ", checkInternet.toString())
-        callService()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (checkForInternet(context)){
+            getAllCars()
+            //callService() -> obsoleto
+        } else {
+            emptyState()
+        }
+    }
+
+    fun setupRetrofit(){
+        var retrofit = Retrofit.Builder()
+            .baseUrl("https://raw.githubusercontent.com/deinvis/cars-api/main/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        carsApi = retrofit.create(CarsApi::class.java)
+    }
+
+    fun getAllCars() {
+        carsApi.getAllCars().enqueue(object : Callback<List<Carro>>{
+            override fun onResponse(call: Call<List<Carro>>, response: Response<List<Carro>>) {
+                if (response.isSuccessful) {
+                    progress.visibility = View.GONE
+                    noConnectionImage.visibility = View.GONE
+                    noConnectionText.visibility = View.GONE
+                    response.body()?.let {
+                        setupList(it)
+                    }
+                } else {
+                    Toast.makeText(context, R.string.response_error, Toast.LENGTH_LONG).show()
+                }
+            }
+
+            override fun onFailure(call: Call<List<Carro>>, t: Throwable) {
+                Toast.makeText(context, R.string.response_error, Toast.LENGTH_LONG).show()
+            }
+        })
+    }
+
+    fun emptyState(){
+        noConnectionImage.visibility = View.VISIBLE
+        noConnectionText.visibility = View.VISIBLE
+        listaCarros.visibility = View.GONE
+        progress.visibility = View.GONE
     }
     private fun setupViews(view: View) {
         view.apply {
             fabCalcular = findViewById(R.id.fab_calcular)
             listaCarros = findViewById(R.id.rv_informacoes)
             progress = findViewById(R.id.pb_loader)
+            noConnectionImage = findViewById(R.id.iv_empty_state)
+            noConnectionText = findViewById(R.id.tv_no_wifi)
+
         }
     }
     private fun setupListeners() {
@@ -58,8 +119,8 @@ class CarFragment : Fragment() {
             startActivity(Intent(context, AutonomiaActivity::class.java))
         }
     }
-    private fun setupList() {
-        val carroAdapter = CarAdapter(carrosArray)
+    private fun setupList(lista: List<Carro>) {
+        val carroAdapter = CarAdapter(lista)
         listaCarros.apply {
             visibility = View.VISIBLE
             adapter = carroAdapter
@@ -79,6 +140,7 @@ class CarFragment : Fragment() {
             return when {
                 activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
                 activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
                 else -> false
             }
         } else {
@@ -89,6 +151,7 @@ class CarFragment : Fragment() {
         }
     }
 
+    //Substituido por Retrofit
     inner class MyTask : AsyncTask<String, String, String>() {
 
         override fun onPreExecute() {
@@ -152,7 +215,9 @@ class CarFragment : Fragment() {
                     carrosArray.add(model)
                 }
                 progress.visibility = View.GONE
-                setupList()
+                noConnectionImage.visibility = View.GONE
+                noConnectionText.visibility = View.GONE
+                //setupList()
             } catch (ex: java.lang.Exception) {
                 Log.e("Erro aqui ->", ex.message.toString())
             }

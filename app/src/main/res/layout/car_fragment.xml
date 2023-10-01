@@ -40,4 +40,28 @@
         app:layout_constraintEnd_toEndOf="@+id/rv_informacoes"
         app:layout_constraintStart_toStartOf="@+id/rv_informacoes"
         app:layout_constraintTop_toTopOf="@+id/rv_informacoes" />
+
+    <ImageView
+        android:id="@+id/iv_empty_state"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:src="@drawable/ic_signal_wifi_off"/>
+
+    <TextView
+        android:id="@+id/tv_no_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sem_conex_o_com_a_internet"
+        android:visibility="gone"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_empty_state"
+        app:layout_constraintStart_toStartOf="@+id/iv_empty_state"
+        app:layout_constraintEnd_toEndOf="@+id/iv_empty_state"
+        android:layout_marginTop="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

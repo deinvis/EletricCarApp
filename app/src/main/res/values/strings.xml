@@ -14,4 +14,5 @@
     <string name="no_wifi">Ops, internet não disponível ):</string>
     <string name="response_error">Algo deu errado, por favor tente novamente mais tarde</string>
     <string name="saved_calc">saved_calc</string>
+    <string name="sem_conex_o_com_a_internet">Sem conexão com a internet</string>
 </resources>

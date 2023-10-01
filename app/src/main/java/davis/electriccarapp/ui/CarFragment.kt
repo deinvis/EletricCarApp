@@ -1,12 +1,17 @@
 package davis.electriccarapp.ui
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.AsyncTask
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -23,6 +28,7 @@ import java.net.URL
 class CarFragment : Fragment() {
     lateinit var listaCarros: RecyclerView
     lateinit var fabCalcular: FloatingActionButton
+    lateinit var progress: ProgressBar
     var carrosArray: ArrayList<Carro> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,14 +40,17 @@ class CarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        callService()
         setupViews(view)
         setupListeners()
+        val checkInternet = checkForInternet(context)
+        Log.d("Internet Connection ", checkInternet.toString())
+        callService()
     }
     private fun setupViews(view: View) {
         view.apply {
             fabCalcular = findViewById(R.id.fab_calcular)
             listaCarros = findViewById(R.id.rv_informacoes)
+            progress = findViewById(R.id.pb_loader)
         }
     }
     private fun setupListeners() {
@@ -50,12 +59,34 @@ class CarFragment : Fragment() {
         }
     }
     private fun setupList() {
-        val adapter = CarAdapter(carrosArray)
-        listaCarros.adapter = adapter
+        val carroAdapter = CarAdapter(carrosArray)
+        listaCarros.apply {
+            visibility = View.VISIBLE
+            adapter = carroAdapter
+        }
     }
 
     fun callService(){
         MyTask().execute("https://raw.githubusercontent.com/deinvis/cars-api/main/cars.json")
+        progress.visibility = View.VISIBLE
+    }
+
+    fun checkForInternet(context: Context?) : Boolean {
+        val connectivityManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val network = connectivityManager.activeNetwork ?: return false
+            val activeNetwork = connectivityManager.getNetworkCapabilities(network) ?: return false
+            return when {
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                else -> false
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            val networkInfo = connectivityManager.activeNetworkInfo ?: return false
+            @Suppress("DEPRECATION")
+            return networkInfo.isConnected
+        }
     }
 
     inner class MyTask : AsyncTask<String, String, String>() {
@@ -120,6 +151,7 @@ class CarFragment : Fragment() {
                     )
                     carrosArray.add(model)
                 }
+                progress.visibility = View.GONE
                 setupList()
             } catch (ex: java.lang.Exception) {
                 Log.e("Erro aqui ->", ex.message.toString())

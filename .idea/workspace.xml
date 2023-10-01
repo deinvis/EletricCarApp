@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Implementação de TabLayout com ViewPager para as abas, criação de fragments para as abas, mudança do botão de calcular para FAB.">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.androidTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/ElectricCarApp.app.unitTest.iml" afterDir="false" />
+    <list default="true" id="eda164b8-e868-4a0d-9320-7d93a7c0040b" name="Changes" comment="Correcao da string da exception da ProgressBar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/CarFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/davis/electriccarapp/ui/CarFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/car_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/car_fragment.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695535098126</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Correcao da string da exception da ProgressBar">
+      <created>1696135667859</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696135667859</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +291,7 @@
     <MESSAGE value="- Realocação de alguns pacotes&#10;- Melhoramento do adapter" />
     <MESSAGE value="inicio de implementação de fragment" />
     <MESSAGE value="Implementação de TabLayout com ViewPager para as abas, criação de fragments para as abas, mudança do botão de calcular para FAB." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação de TabLayout com ViewPager para as abas, criação de fragments para as abas, mudança do botão de calcular para FAB." />
+    <MESSAGE value="Correcao da string da exception da ProgressBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcao da string da exception da ProgressBar" />
   </component>
 </project>
